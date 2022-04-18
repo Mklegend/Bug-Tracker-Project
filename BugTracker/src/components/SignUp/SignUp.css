@@ -1,0 +1,7 @@
+.ctn::before{
+    content: '';
+    display: block;
+    background-color: 'green';
+    width: 10px;
+    height: 10px;
+}
