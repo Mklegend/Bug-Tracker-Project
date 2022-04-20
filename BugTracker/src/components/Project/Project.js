@@ -7,7 +7,7 @@ export default class Project extends Component {
     constructor(props){
         super(props)
         this.state = {
-            showTicketInfo : false
+            showTicketInfo : true
         }
     }
     render(){
