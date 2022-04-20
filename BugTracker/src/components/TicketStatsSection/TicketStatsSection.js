@@ -4,7 +4,7 @@ import TicketsStats from '../TicketsStats/TicketsStats'
 
 export default function TicketStatsSection() {
   return (
-    <div className='mt-5 row d-flex'>
+    <div className='mt-5 row d-flex mx-1'>
         <div className='col container border border-2 rounded-2'>
             <TicketsStats stat={'Type'} options={['Issue','Bug','Feature Request']} />
         </div>

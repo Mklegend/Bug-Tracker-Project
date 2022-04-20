@@ -1,17 +1,14 @@
 import React from 'react'
-import ProjectSection from '../ProjectSection/ProjectSection'
-import TicketsStats from '../TicketsStats/TicketsStats'
-import TicketStats from '../TicketsStats/TicketsStats'
 import TicketStatsSection from '../TicketStatsSection/TicketStatsSection'
 
 export default function Dashboard() {
   return (
     <div className='container-fluid'>
-        <div className='container mt-5'>
-            <h2>Dashboard</h2>
+        <div className='container-fluid mt-5'>
+            <h2 className='fw-bold' style={{color:'navy'}}>Dashboard</h2>
         </div>
-        <ProjectSection />
-        <TicketStatsSection />
+        {/* <ProjectSection />
+        <TicketStatsSection /> */}
     </div>
   )
 }

@@ -21,8 +21,8 @@ export default function TicketsStats(props) {
                     props.options.map((option)=>{
                         return (
                             <li className='nav-item d-flex align-items-center'>
-                                <span class="dot"></span>
-                                <a style={{fontSize:'8px'}} className='nav-link'>{option}</a>
+                                <span className="dot"></span>
+                                <a href='#/' style={{fontSize:'8px'}} className='nav-link'>{option}</a>
                             </li>
                         )
                     })
