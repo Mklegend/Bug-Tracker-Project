@@ -9,7 +9,7 @@ function App() {
      <div className='container-fluid d-md-flex' style={{minHeight:'100vh'}}>
        <SideBar />
        {/* <Dashboard /> */}
-       <Project title={'Bug Tracker'} desc={'Project Description'} />
+        <Project title={'Bug Tracker'} desc={'Project Description'} />
      </div>
   );
 }

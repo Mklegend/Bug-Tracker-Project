@@ -9,9 +9,9 @@ export default class DataSection extends Component{
   }  
   render(){
     return (
-      <div className='d-none d-sm-block container-fluid py-3 mt-5 border border-2 rounded-3'>
+      <div className='d-none d-sm-block container-fluid py-3 mt-5 border border-2 rounded-3' style={{boxShadow:'0 3px 10px rgb(0 0 0 / 0.2)'}}>
           <div className='row m-2 d-flex justify-content-between'>
-            <div className='col-6'>
+            <div className='col-6 d-flex'>
                 <h3>{this.props.title}</h3>
             </div>
             <div className='col-4 d-flex justify-content-end'>
