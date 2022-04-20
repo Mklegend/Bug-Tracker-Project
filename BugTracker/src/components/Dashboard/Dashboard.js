@@ -1,4 +1,5 @@
 import React from 'react'
+import DataSection from '../DataSection/DataSection'
 import TicketStatsSection from '../TicketStatsSection/TicketStatsSection'
 
 export default function Dashboard() {
@@ -7,8 +8,8 @@ export default function Dashboard() {
         <div className='container-fluid mt-5'>
             <h2 className='fw-bold' style={{color:'navy'}}>Dashboard</h2>
         </div>
-        {/* <ProjectSection />
-        <TicketStatsSection /> */}
+        <DataSection title={'Projects'} item={'Project'} tableHeadings={['Project','Description','Contributors']} />
+        <TicketStatsSection />
     </div>
   )
 }
