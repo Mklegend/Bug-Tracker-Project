@@ -20,7 +20,7 @@ export default class TicketSection extends Component {
                     <h4 className='fw-bold'>Tickets</h4>
                 </div>
                 <DataTable tableHeadings={['Project','Ticket','Status','Days Outstanding','Priority']} projectName={'Bug Tracker'}
-                tableEnteries={['Ticket','status','Days Outstanding','Priority']}/>
+                tableEntries={['Ticket','status','Days Outstanding','Priority']}/>
             </div>
       </div>
       </>

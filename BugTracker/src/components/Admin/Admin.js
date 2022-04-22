@@ -16,12 +16,12 @@ export default function Admin() {
                         <h4>ORGANIZATION</h4>
                     </div>
                     <div className='container py-4'>
-                        <ul class="list-group">
-                            <li class="list-group-item">Jhon Doe</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Morbi leo risus</li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                        <ul className="list-group">
+                            <li className="list-group-item">Jhon Doe</li>
+                            <li className="list-group-item">Dapibus ac facilisis in</li>
+                            <li className="list-group-item">Morbi leo risus</li>
+                            <li className="list-group-item">Porta ac consectetur ac</li>
+                            <li className="list-group-item">Vestibulum at eros</li>
                         </ul>
                     </div>
                 </div>
