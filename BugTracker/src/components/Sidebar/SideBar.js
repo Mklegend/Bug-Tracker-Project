@@ -33,7 +33,7 @@ export default function SideBar() {
                         <Link className='nav-link'  to="/admin"><h5 className='ms-2'>Administration</h5></Link>
                     </Nav.Link>
                     <Container className='text-center mt-3'>
-                        <Link  to="/signin"><Button variant='danger' size={'lg'}>Logout</Button></Link>
+                        <Link  to="/"><Button variant='danger' size={'lg'}>Logout</Button></Link>
                     </Container>
                 </Nav>
             </Navbar.Collapse>

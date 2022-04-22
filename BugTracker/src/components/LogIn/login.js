@@ -10,17 +10,14 @@ import { Google } from 'react-bootstrap-icons'
 
 export const LogIn = () => {
     return (
-        //ui div
-        <div>
+        <div id='ctn' className='container-fluid'>
             <div className="custom-shape-divider-top-1650649808">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill">
                     </path>
                 </svg>
-
             </div>
-            <div className='py-5 container-fluid d-flex flex-column example align-items-center' style={{ minHeight: '100vh' }}>
-
+            <div className='py-5 container-fluid d-flex flex-column align-items-center' style={{ minHeight: '100vh'}}>
                 <div className='d-flex row'>
                     <div className='text-center'>
                         <h1> <span style={{ color: 'white' }}>Bug Tracker</span></h1>
@@ -59,7 +56,7 @@ export const LogIn = () => {
                                     <p className='text-muted'>Remember me</p>
                                 </div>
                             </Form.Group>
-                            <Button variant="primary" type="submit" style={{ backgroundColor: '#577FE6' }}>
+                            <Button href='/dashboard' className='btn-lg' variant="primary" type="submit" style={{ backgroundColor: '#577FE6' }}>
                                 Sign In
                             </Button>
                             <Form.Group className='d-flex mt-2'>

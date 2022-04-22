@@ -1,4 +1,6 @@
-
+#ctn{
+    font-size: 1.4rem;
+}
 .custom-shape-divider-top-1650649808 {
     position: absolute;
     top: 0;
@@ -6,6 +8,7 @@
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: -1;
 }
 
 .custom-shape-divider-top-1650649808 svg {
@@ -21,13 +24,6 @@
     fill: rgb(87, 127, 230);
 }
 
-.example{
-    height: 200px;
-    margin-top: 10px;
-    position: absolute;
-    top: 0;
-    margin-left: 500px;
-}
 .hero{
     overflow: hidden;
     display: flex;

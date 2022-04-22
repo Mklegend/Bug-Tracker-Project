@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import DataSection from '../DataSection/DataSection'
 import DataTable from '../DataTable/DataTable'
 import SideBar from '../Sidebar/SideBar' 
 
@@ -21,7 +20,7 @@ export default class TicketSection extends Component {
                     <h4 className='fw-bold'>Tickets</h4>
                 </div>
                 <DataTable tableHeadings={['Project','Ticket','Status','Days Outstanding','Priority']} projectName={'Bug Tracker'}
-                 ticketName={'Ticket'} status={'status'}  daysOutstanding={'Days Outstanding'} priority={'Priority'}/>
+                tableEnteries={['Ticket','status','Days Outstanding','Priority']}/>
             </div>
       </div>
       </>
