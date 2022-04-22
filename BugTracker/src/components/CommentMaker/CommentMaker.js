@@ -25,7 +25,7 @@ export class CommentMaker extends Component {
 
     render(){
         return(
-            <div className="container-fluid py-5 " style={{height:'34vh',boxShadow:'0 3px 10px rgb(0 0 0 / 0.2)'}} >
+            <div className="container-fluid py-5 " style={{boxShadow:'0 3px 10px rgb(0 0 0 / 0.2)'}} >
                 <div className="container px-0">
                     <h3>Comments</h3>
                 </div>

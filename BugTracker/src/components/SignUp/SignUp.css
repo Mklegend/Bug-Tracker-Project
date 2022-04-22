@@ -63,17 +63,38 @@ html{
     border-color: #bd4033
 }
 
-.fa-facebook:before {
-    content: "\f09a";
-}
-*, ::after, ::before {
-    box-sizing: border-box;
+
+.custom-shape-divider-top-1650649808 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
 
-.fa-google-plus:before {
-    content: "\f0d5";
-}
-*, ::after, ::before {
-    box-sizing: border-box;
+.custom-shape-divider-top-1650649808 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 670px;
+    transform: rotateY(180deg);
+    z-index: -2;
 }
 
+.custom-shape-divider-top-1650649808 .shape-fill {
+    fill: rgb(87, 127, 230);
+}
+
+.example{
+    height: 200px;
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    margin-left: 500px;
+}
+.hero{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
