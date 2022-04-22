@@ -2,7 +2,6 @@ import './App.css';
 import SideBar from '../Sidebar/SideBar';
 import Dashboard from '../Dashboard/Dashboard';
 import Project from '../Project/Project';
-import TicketStatsSection from '../TicketStatsSection/TicketStatsSection';
 import TicketSection from '../TicketSection/TicketSection';
 import Admin from '../Admin/Admin';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
@@ -20,10 +19,6 @@ function App(props) {
               <Route exact path='/bugtracker' element={<Project />}></Route>
             </Routes>
        </Router>
-        {/* <Dashboard /> */}
-        {/* <Project title={'Bug Tracker'} desc={'Project Management Tool to track bugs,issues etc'} /> */}
-        {/* <TicketSection /> */}
-        {/* <Admin /> */}
      </div>
   );
 }

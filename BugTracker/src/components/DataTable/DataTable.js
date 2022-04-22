@@ -17,16 +17,56 @@ export default function DataTable (props) {
             <tbody>
                 <tr>
                     {
-                        props.prj ? <Link  to="/bugtracker"><td style={{color:'navy'}}>Bug Tracker</td></Link> :
-                        <td style={{color:'navy'}}>Bug Tracker</td>
+                        props.prj ? <Link  to="/bugtracker"><td style={{color:'navy'}}>{props.projectName}</td></Link> :
+                        <td style={{color:'navy'}}>{props.projectName}</td>
                     }
-                    <td style={{color:'navy'}}>Project Management Tool to track bugs,issues etc</td>
-                    <td style={{color:'navy'}}>Jhon Doe</td>
+                    {
+                        props.email ? <td style={{color:'navy'}}>{props.email}</td> : ''
+                    }
+                    {
+                        props.phoneNo ? <td style={{color:'navy'}}>{props.phoneNo}</td> : ''
+                    }
+
+                    {
+                        props.ticketName ? <td style={{color:'navy'}}>{props.ticketName}</td> : ''
+                    }
+
+                    {
+                        props.status ? <td style={{color:'navy'}}>{props.status}</td> : ''
+                    }
+
+                    {       
+                        props.daysOutstanding ? <td style={{color:'navy'}}>{props.daysOutstanding }</td> : ''
+                    }
+
+                    {       
+                        props.priority ? <td style={{color:'navy'}}>{props.priority }</td> : ''
+                    }
+
+                    {       
+                        props.ticketTitle ? <td style={{color:'navy'}}>{props.ticketTitle }</td> : ''
+                    }
+        
+                    {       
+                        props.ticketDescription ? <td style={{color:'navy'}}>{props.ticketDescription }</td> : ''
+                    }
+
+                    {       
+                        props.ticketAuthor ? <td style={{color:'navy'}}>{props.ticketAuthor}</td> : ''
+                    }
+        
+        
+        
+
+
                 </tr>
                 <tr>
-                    <td style={{color:'navy'}}>Bug Tracker</td>
-                    <td style={{color:'navy'}}>Project Management Tool to track bugs,issues etc</td>
-                    <td style={{color:'navy'}}>Jhon Doe</td>
+                    {
+                        props.prj ? <Link  to="/bugtracker"><td style={{color:'navy'}}>{props.projectName}</td></Link> :
+                        <td style={{color:'navy'}}>{props.projectName}</td>
+                    }
+                    <td style={{color:'navy'}}>{props.email}</td>
+                    <td style={{color:'navy'}}>{props.phoneNo}</td>
                 </tr>
             </tbody>
         </table>

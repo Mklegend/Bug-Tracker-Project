@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form, Button } from 'react-bootstrap'
-// import './SignUp.css'
+import './SignUp.css'
 import { EnvelopeFill } from 'react-bootstrap-icons'
 import { Phone } from 'react-bootstrap-icons'
 import { PersonFill } from 'react-bootstrap-icons'
@@ -66,9 +66,20 @@ export const SignUp = () => {
                                 <LockFill className='me-1' size={20} color={'lightgray'} />
                                 <input className='py-2 w-100' type='password' placeholder='Confirm Password' style={{ border: 'none', outline: 'none' }} />
                             </Form.Group>
-                            <Button variant="primary" type="submit" style={{ backgroundColor: '#577FE6' }}>
+                            <Button className='mb-4' variant="primary" type="submit" style={{ backgroundColor: '#577FE6' }}>
                                 Create Account
                             </Button>
+
+                            <Form.Group className='d-flex'>
+                                <div class="login_wrapper">
+                                    <div className=' mb-2 me-1 align-items-center'>
+                                        <a href="#" class="btn btn-primary facebook"> <span>Login with Facebook</span> <i class="fa fa-facebook"></i> </a>
+                                    </div>
+                                    <div className='align-items-center'>
+                                        <a href="#" class="btn btn-primary google-plus"> Login with Gmail <i class="fa fa-google-plus"></i> </a>
+                                    </div>
+                                </div>
+                            </Form.Group>
                         </Form>
                     </div>
                 </div>

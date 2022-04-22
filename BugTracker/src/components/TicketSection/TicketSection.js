@@ -20,7 +20,8 @@ export default class TicketSection extends Component {
                 <div className='container-fluid mb-4'>
                     <h4 className='fw-bold'>Tickets</h4>
                 </div>
-                <DataTable tableHeadings={['Project','Ticket','Status','Days Outstanding','Priority']} />
+                <DataTable tableHeadings={['Project','Ticket','Status','Days Outstanding','Priority']} projectName={'Bug Tracker'}
+                 ticketName={'Ticket'} status={'status'}  daysOutstanding={'Days Outstanding'} priority={'Priority'}/>
             </div>
       </div>
       </>

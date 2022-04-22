@@ -53,7 +53,8 @@ export default class Project extends Component {
                             <TicketModal />
                         </div>
                      </div>
-                    <DataSection prj={false} title={'Tickets'} tableHeadings={['Ticket Title','Description','Ticket Author']} item={'Ticket'} />
+                    <DataSection prj={false} title={'Tickets'} tableHeadings={['Ticket Title','Description','Ticket Author']} item={'Ticket'} 
+                    ticketTitle={'Title Ticket'} ticketDescription={'Description'} ticketAuthor={'Ticket Author'}/>
                 </div>
             </div>
         </div>
