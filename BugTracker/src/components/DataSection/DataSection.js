@@ -11,7 +11,7 @@ export default class DataSection extends Component{
     return (
       <div className='container-fluid'>
           <div className='row mt-4'>
-            <DataTable tableHeadings={this.props.tableHeadings} />
+            <DataTable prj={this.props.prj} tableHeadings={this.props.tableHeadings} />
           </div>
           <div>
           <nav aria-label="Page navigation example">

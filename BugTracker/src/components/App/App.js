@@ -5,14 +5,23 @@ import Project from '../Project/Project';
 import TicketStatsSection from '../TicketStatsSection/TicketStatsSection';
 import TicketSection from '../TicketSection/TicketSection';
 import Admin from '../Admin/Admin';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import {LogIn} from '../LogIn/login'
 
-
-function App() {
+function App(props) {
   return (
      <div className='container-fluid d-md-flex' style={{minHeight:'100vh'}}>
-       <SideBar />
+       <Router> 
+          <Routes>
+              <Route exact path='/' element={<Dashboard />}></Route>
+              <Route exact path='/tickets' element={<TicketSection />}></Route>
+              <Route exact path='/admin' element={<Admin />}></Route>
+              <Route exact path='/signin' element={<LogIn />}></Route>
+              <Route exact path='/bugtracker' element={<Project />}></Route>
+            </Routes>
+       </Router>
         {/* <Dashboard /> */}
-        <Project title={'Bug Tracker'} desc={'Project Management Tool to track bugs,issues etc'} />
+        {/* <Project title={'Bug Tracker'} desc={'Project Management Tool to track bugs,issues etc'} /> */}
         {/* <TicketSection /> */}
         {/* <Admin /> */}
      </div>

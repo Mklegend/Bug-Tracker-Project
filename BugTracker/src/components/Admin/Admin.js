@@ -1,7 +1,10 @@
 import React from 'react'
+import SideBar from '../Sidebar/SideBar' 
 
 export default function Admin() {
   return (
+    <>
+    <SideBar/>
     <div className='container-fluid'>
         <div className='container-fluid px-0 mt-5 mb-5'>
                 <h2 className='fw-bold' style={{color:'navy'}}>ADMINISTRATION</h2>
@@ -33,5 +36,6 @@ export default function Admin() {
             </div>
         </div>
     </div>
+    </>
   )
 }

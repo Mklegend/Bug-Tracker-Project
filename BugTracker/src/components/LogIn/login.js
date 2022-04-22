@@ -8,9 +8,9 @@ import { LockFill } from 'react-bootstrap-icons'
 
 export const LogIn = () => {
     return (
-        <div className='py-5 container-fluid d-flex flex-column align-items-center' style={{ minHeight: '100vh', backgroundColor: '#212C4B' }}>
+        <div className='py-5 container-fluid d-flex flex-column justify-content-center align-items-center' style={{ minHeight: '100vh', backgroundColor: '#212C4B' }}>
 
-            <div classname='d-flex row'>
+            <div className='d-flex row'>
                 <div className='text-center'>
                     <h1> <span style={{ color: 'white' }}>Bug Tracker</span></h1>
                 </div>

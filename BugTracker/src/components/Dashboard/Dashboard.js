@@ -2,10 +2,13 @@ import React from 'react'
 import DataSection from '../DataSection/DataSection'
 import TicketStatsSection from '../TicketStatsSection/TicketStatsSection'
 import { ProjectModal } from '../ProjectModal/ProjectModal'
+import SideBar from '../Sidebar/SideBar' 
 
 export default function Dashboard() {
   return (
-    <div className='container-fluid'>
+    <>
+    <SideBar/>
+    <div className='container-fluid' style={{background: "linear-gradient(white, white)" }}>
         <div className='container-fluid mt-5'>
             <h2 className='fw-bold' style={{color:'navy'}}>Dashboard</h2>
         </div>
@@ -18,9 +21,10 @@ export default function Dashboard() {
                             <ProjectModal />
                         </div>
                      </div>
-                    <DataSection title={'Team'} item={'Member'} tableHeadings={['Name','Email','Phone']} />
+                    <DataSection prj={true} title={'Team'} item={'Member'} tableHeadings={['Name','Email','Phone']} />
         </div>
         <TicketStatsSection />
     </div>
+    </>
   )
 }

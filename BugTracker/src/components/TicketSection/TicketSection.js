@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import DataSection from '../DataSection/DataSection'
 import DataTable from '../DataTable/DataTable'
+import SideBar from '../Sidebar/SideBar' 
 
 export default class TicketSection extends Component {
     constructor(props){
@@ -9,6 +10,8 @@ export default class TicketSection extends Component {
     }
     render() {
     return (
+      <>
+      <SideBar/>
       <div className='container-fluid'>
             <div className='container-fluid px-0 mt-5'>
                 <h2 className='fw-bold' style={{color:'navy'}}>TICKETS</h2>
@@ -20,6 +23,7 @@ export default class TicketSection extends Component {
                 <DataTable tableHeadings={['Project','Ticket','Status','Days Outstanding','Priority']} />
             </div>
       </div>
+      </>
     )
   }
 }

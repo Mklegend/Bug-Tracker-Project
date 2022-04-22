@@ -1,9 +1,10 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function DataTable (props) {
     return (
     <>
-        <table className='table table-lg table-borderless table-hover'>
+        <table className='table table-lg table-borderless'>
             <thead>
                 <tr className='table-light'>
                     {
@@ -15,7 +16,10 @@ export default function DataTable (props) {
             </thead>
             <tbody>
                 <tr>
-                    <td style={{color:'navy'}}>Bug Tracker</td>
+                    {
+                        props.prj ? <Link  to="/bugtracker"><td style={{color:'navy'}}>Bug Tracker</td></Link> :
+                        <td style={{color:'navy'}}>Bug Tracker</td>
+                    }
                     <td style={{color:'navy'}}>Project Management Tool to track bugs,issues etc</td>
                     <td style={{color:'navy'}}>Jhon Doe</td>
                 </tr>
