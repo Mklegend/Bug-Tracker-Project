@@ -22,7 +22,7 @@ export default function SideBar() {
                 <Nav className="me-auto d-flex flex-column">
                     <Nav.Link className='d-flex align-items-center' href="#home">
                         <Tv size={20}/>
-                        <Link className='nav-link'  to="/"><h5 className='ms-2'>Dashboard</h5></Link>
+                        <Link className='nav-link'  to="/dashboard"><h5 className='ms-2'>Dashboard</h5></Link>
                     </Nav.Link>
                     <Nav.Link className='d-flex align-items-center' href="#home">
                         <TicketDetailed size={20}/>
