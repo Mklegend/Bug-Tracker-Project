@@ -5,22 +5,29 @@ import { EnvelopeFill } from 'react-bootstrap-icons'
 import { Phone } from 'react-bootstrap-icons'
 import { PersonFill } from 'react-bootstrap-icons'
 import { LockFill } from 'react-bootstrap-icons'
-
-
+import { Facebook } from 'react-bootstrap-icons'
+import { Google } from 'react-bootstrap-icons'
 
 export const SignUp = () => {
     return (
-        
-            <div id='ctn' className='py-5 container-fluid d-flex flex-column align-items-center' style={{ minHeight: '100vh', backgroundColor: '#212C4B' }}>
+        <div>
+            <div className="custom-shape-divider-top-1650649808">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill">
+                    </path>
+                </svg>
+
+            </div>
+            <div id='ctn' className='py-5 container-fluid d-flex flex-column align-items-center example' style={{ minHeight: '100vh'}}>
 
 
-                <div classname='d-flex row'>
+                <div className='d-flex row'>
                     <div className='text-center'>
                         <h1> <span style={{ color: 'white' }}>Bug Tracker</span></h1>
                     </div>
 
                     <div className="text-center">
-                        <h3 className='text-muted' style={{ fontSize: '20px', color: 'white' }}> Login or Register</h3>
+                        <h3 style={{ fontSize: '20px', color: 'rgb(220,220,220)' }}> Login or Register</h3>
                     </div>
                 </div>
 
@@ -29,7 +36,7 @@ export const SignUp = () => {
 
 
 
-                <div className='row my-5 py-5 px-3' style={{ backgroundColor: '#ffff ', borderRadius: '1.5%' }}>
+                <div className='row my-5 py-5 px-3 ' style={{ backgroundColor: '#ffff ', borderRadius: '1.5%', boxShadow:'0 3px 10px rgb(0 0 0 / 0.2)' }}>
                     <div className='col text-center'>
                         <div className='text-center'>
                             <h4 className='text-muted'>Sign Up</h4>
@@ -71,12 +78,12 @@ export const SignUp = () => {
                             </Button>
 
                             <Form.Group className='d-flex'>
-                                <div class="login_wrapper">
+                                <div className="login_wrapper">
                                     <div className=' mb-2 me-1 align-items-center'>
-                                        <a href="#" class="btn btn-primary facebook"> <span>Login with Facebook</span> <i class="fa fa-facebook"></i> </a>
+                                        <a href="/#" className="btn btn-primary facebook text-center"> <span>Sign Up with Facebook</span> <Facebook size={20} className='ms-2' /> </a>
                                     </div>
                                     <div className='align-items-center'>
-                                        <a href="#" class="btn btn-primary google-plus"> Login with Gmail <i class="fa fa-google-plus"></i> </a>
+                                        <a href="/#" className="btn btn-primary google-plus text-center"> Sign Up with Gmail <Google size={20} className='ms-4' />  </a>
                                     </div>
                                 </div>
                             </Form.Group>
@@ -95,8 +102,10 @@ export const SignUp = () => {
                     </div>
 
                 </div>
+            </div>
+
         </div>
-        
+
 
     );
 }
