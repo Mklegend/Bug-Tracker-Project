@@ -21,7 +21,7 @@ export default function Dashboard() {
                             <ProjectModal />
                         </div>
                      </div>
-                    <DataSection prj={true} title={'Team'} item={'Member'} tableHeadings={['Name','Email','Phone']} />
+                    <DataSection prj={true} title={'Team'} item={'Member'} tableHeadings={['Name','Email','Phone']} tableEntries={['john@gmail.com', '+9203030300303']} projectName={'Bug Tracker 1.0'}/>
         </div>
         <TicketStatsSection />
     </div>

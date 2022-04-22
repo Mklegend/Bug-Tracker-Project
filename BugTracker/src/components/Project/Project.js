@@ -42,7 +42,7 @@ export default class Project extends Component {
                             <TeamModal />
                         </div>
                      </div>
-                    <DataSection prj={false} title={'Team'} item={'Member'} tableHeadings={['Name','Email','Phone']} />
+                    <DataSection prj={false} title={'Team'} item={'Member'} tableHeadings={['Name','Email','Phone']} tableEntries={['johndoe@gmail.com', '+920300303']} projectName={'John Doe'}/>
                 </div>
                 <div className='col-12 col-md-8 d-none d-sm-block container-fluid py-3 mt-5 border border-2 rounded-3' style={{boxShadow:'0 3px 10px rgb(0 0 0 / 0.2)'}}>
                     <div className='row m-2 d-flex justify-content-between'>
@@ -54,7 +54,7 @@ export default class Project extends Component {
                         </div>
                      </div>
                     <DataSection prj={false} title={'Tickets'} tableHeadings={['Ticket Title','Description','Ticket Author']} item={'Ticket'} 
-                    ticketTitle={'Title Ticket'} ticketDescription={'Description'} ticketAuthor={'Ticket Author'}/>
+                    tableEntries={['Ticket Description', 'Ticket Author'] } projectName={'Ticket Title'}/>
                 </div>
             </div>
         </div>

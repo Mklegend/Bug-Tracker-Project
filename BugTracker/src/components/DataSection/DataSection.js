@@ -11,9 +11,8 @@ export default class DataSection extends Component{
     return (
       <div className='container-fluid'>
           <div className='row mt-4'>
-            <DataTable prj={this.props.prj} tableHeadings={this.props.tableHeadings} 
-            projectName={'BugTracker 1.0'}  email={'johndoe@gmail.com'} phoneNo={'+92030300000000'}
-            ticketTitle={this.props.ticketTitle} ticketDescription={this.props.ticketDescription} ticketAuthor={this.props.ticketAuthor}/>
+            <DataTable prj={this.props.prj} tableHeadings={this.props.tableHeadings} projectName={this.props.projectName}
+            tableEntries={this.props.tableEntries}  />
           </div>
           <div>
           <nav aria-label="Page navigation example">

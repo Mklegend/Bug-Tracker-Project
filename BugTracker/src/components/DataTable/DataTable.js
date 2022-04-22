@@ -21,39 +21,11 @@ export default function DataTable (props) {
                         <td style={{color:'navy'}}>{props.projectName}</td>
                     }
                     {
-                        props.email ? <td style={{color:'navy'}}>{props.email}</td> : ''
-                    }
-                    {
-                        props.phoneNo ? <td style={{color:'navy'}}>{props.phoneNo}</td> : ''
-                    }
-
-                    {
-                        props.ticketName ? <td style={{color:'navy'}}>{props.ticketName}</td> : ''
+                        props.tableEntries.map((entries)=>{
+                            return <td style={{color:'gray'}}>{entries}</td>
+                        })
                     }
 
-                    {
-                        props.status ? <td style={{color:'navy'}}>{props.status}</td> : ''
-                    }
-
-                    {       
-                        props.daysOutstanding ? <td style={{color:'navy'}}>{props.daysOutstanding }</td> : ''
-                    }
-
-                    {       
-                        props.priority ? <td style={{color:'navy'}}>{props.priority }</td> : ''
-                    }
-
-                    {       
-                        props.ticketTitle ? <td style={{color:'navy'}}>{props.ticketTitle }</td> : ''
-                    }
-        
-                    {       
-                        props.ticketDescription ? <td style={{color:'navy'}}>{props.ticketDescription }</td> : ''
-                    }
-
-                    {       
-                        props.ticketAuthor ? <td style={{color:'navy'}}>{props.ticketAuthor}</td> : ''
-                    }
         
         
         
@@ -61,12 +33,16 @@ export default function DataTable (props) {
 
                 </tr>
                 <tr>
-                    {
+                {
                         props.prj ? <Link  to="/bugtracker"><td style={{color:'navy'}}>{props.projectName}</td></Link> :
                         <td style={{color:'navy'}}>{props.projectName}</td>
                     }
-                    <td style={{color:'navy'}}>{props.email}</td>
-                    <td style={{color:'navy'}}>{props.phoneNo}</td>
+                    {
+                        props.tableEntries.map((entries)=>{
+                            return <td style={{color:'gray'}}>{entries}</td>
+                        })
+                    }
+
                 </tr>
             </tbody>
         </table>
