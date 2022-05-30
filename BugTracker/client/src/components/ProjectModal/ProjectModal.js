@@ -29,7 +29,7 @@ export const ProjectModal = () => {
                 <textarea className='form-control' style={{borderRadius:'5px',height:'100px'}} placeholder='Enter Description' />
             </div>
             <div className='container'>
-                <label className='h3 text-muted'>Add Team Members</label>
+                <label className='h3 text-muted'>Select Team Lead</label>
                 <select className="form-select" multiple aria-label="multiple select example">
                     <option selected>Select Members</option>
                     <option value="1">Jhon Doe</option>

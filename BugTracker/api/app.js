@@ -3,11 +3,24 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const dotenv = require("dotenv");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var authRouter = require('./routes/auth');
+const mongoose = require("mongoose");
+var projectRouter = require('./routes/project');
+var pticketRouter = require('./routes/pticket');
+var commentRouter =  require('./routes/comment');
+var gTicketsRouter = require('./routes/gtickets');
+var organizationRouter = require('./routes/organization');
+// var cors = require('cors');
+// app.use(cors());
+dotenv.config();
 var app = express();
+
+mongoose.connect(process.env.MONGO_URL).then(console.log("connected to MONGO")).catch((err)=>{
+  console.log("error");
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,6 +34,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/auth',  authRouter);
+app.use('/project', projectRouter);
+app.use('/pticket', pticketRouter);
+app.use('/comment', commentRouter);
+app.use('/gtickets', gTicketsRouter);
+app.use('/organization', organizationRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
