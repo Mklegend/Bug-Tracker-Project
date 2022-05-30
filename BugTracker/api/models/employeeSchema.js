@@ -19,7 +19,7 @@ const employeeSchema = new mongoose.Schema(
             required: true
         }
         // TODO
-        // If assigned is false only thenshow the employee in the To be Assigned Devs List
+        // If assigned is false only then show the employee in the To be Assigned Devs List
     },
     { timestamps: true }
 );
