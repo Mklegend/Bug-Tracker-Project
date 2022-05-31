@@ -9,11 +9,9 @@ const employeeSchema = new mongoose.Schema(
             type: String, 
             required: true,
         },
-        picture: {
-            type: String, 
-            required: true,
-            unique: true,
-        },
+        // picture: {
+        //     type: String, 
+        // },
         assigned:{
             type:Boolean,
             required: true

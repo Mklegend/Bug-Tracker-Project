@@ -6,10 +6,10 @@ const PcommentsSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        user: {
-            type: employeeSchema, 
-            required: true,
-        },
+        // user: {
+        //     type: employeeSchema, 
+        //     required: true,
+        // },
     },
     { timestamps: true }
 );

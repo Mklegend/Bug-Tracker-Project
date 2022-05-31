@@ -7,14 +7,15 @@ const dotenv = require("dotenv");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
+var XMLHttpRequest = require('xhr2');
+var xhr = new XMLHttpRequest();
 const mongoose = require("mongoose");
 var projectRouter = require('./routes/project');
 var pticketRouter = require('./routes/pticket');
 var commentRouter =  require('./routes/comment');
 var gTicketsRouter = require('./routes/gtickets');
 var organizationRouter = require('./routes/organization');
-// var cors = require('cors');
-// app.use(cors());
+var cors = require('cors');
 dotenv.config();
 var app = express();
 
@@ -31,6 +32,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors());
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'http://localhost:8000/', true);
+xhr.withCredentials = true;
+xhr.send(null);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -45,6 +52,7 @@ app.use('/organization', organizationRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 
 // error handler
 app.use(function(err, req, res, next) {
