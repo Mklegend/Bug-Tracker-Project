@@ -70,7 +70,6 @@ export const LogIn = () => {
                                 </div>
                             </Form.Group>
                         </Form>
-
                     </div>
                 </div>
 

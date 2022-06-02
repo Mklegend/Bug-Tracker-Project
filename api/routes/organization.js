@@ -27,7 +27,7 @@ router.post('/createemployee', async (req, res) => {
 
 router.get("/getemployee", async (req,res)=>{
     try{
-        const emp = await employee.find({},{name:1})
+        const emp = await employee.find({})
         // console.log(emp)
         res.status(200).json(emp);
     }catch(err){
@@ -45,4 +45,42 @@ router.post("/deleteemployee", async(req,res) =>{
     }
 });
 
+router.post('/updateemployee',async (req,res)=>{
+    const oldName = req.body.oldName
+    const newName = req.body.newName
+    const desg = req.body.newDesignation
+
+    try{
+        const emp = await employee.find({name:oldName})
+        console.log(emp)
+        const result = await employee.updateOne({name:oldName},{$set:{name:newName,designation:desg}})
+        res.redirect('http://localhost:3000/admin')
+    }catch(err){
+        res.status(500).json(err);
+    }
+})
+
 module.exports = router;
+
+// router.put("/:id", async (req, res) => {  //req is what we are sending to our server
+
+//     try {
+//         const post = await Post.findById(req.params.id);
+//         if (post.username === req.body.username) {
+//             try {
+//                 const updatedPost = await Post.findByIdAndUpdate(req.params.id, {
+//                     $set: req.body
+//                 }, { new: true });
+//                 res.status(200).json(updatedPost);
+//             } catch (err) {
+//                 res.status(500).json(err);
+//             }
+//         }
+//         else {
+//             res.status(401).json("You can update only your post!");
+//         }
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+
+// })
