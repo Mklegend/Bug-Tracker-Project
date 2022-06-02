@@ -35,6 +35,16 @@ router.get("/getemployee", async (req,res)=>{
     }
 })
 
+router.get("/getfreeemployee", async (req,res)=>{
+    try{
+        const emp = await employee.find({assigned: false})
+        // console.log(emp)
+        res.status(200).json(emp);
+    }catch(err){
+        res.status(500).json(err);
+    }
+})
+
 router.post("/deleteemployee", async(req,res) =>{
     const id = req.body.id;
     try{

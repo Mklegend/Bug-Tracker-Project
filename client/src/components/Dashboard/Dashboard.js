@@ -3,8 +3,23 @@ import DataSection from '../DataSection/DataSection'
 import TicketStatsSection from '../TicketStatsSection/TicketStatsSection'
 import { ProjectModal } from '../ProjectModal/ProjectModal'
 import SideBar from '../Sidebar/SideBar'
+import axios from "axios"
+import { useState, useEffect } from 'react'
+
 
 export default function Dashboard() {
+    const [allProjects, setProjects] = useState([]);
+
+    async function getProjects() {
+        let x = await axios.get("http://localhost:8000/project/getproject")
+        setProjects(x.data);
+        console.log(x.data);
+    }
+
+    useEffect(() => {
+        getProjects();
+    }, [])
+
     return (
         <>
             <SideBar />
@@ -21,7 +36,7 @@ export default function Dashboard() {
                             <ProjectModal />
                         </div>
                     </div>
-                    <DataSection prj={true} title={'Team'} item={'Member'} tableHeadings={['Name', 'Email', 'Phone']} tableEntries={['john@gmail.com', '+9203030300303']} projectName={'Bug Tracker 1.0'} />
+                    <DataSection prj={true} title={'Team'} item={'Member'} tableHeadings={['Name', 'Description', 'Lead']} tableEntries={['john@gmail.com', '+9203030300303']} projectName={'Bug Tracker 1.0'} />
                 </div>
                 <TicketStatsSection />
             </div>
