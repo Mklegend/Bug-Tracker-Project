@@ -31,5 +31,14 @@ router.get('/getproject', async(req, res) => {
     }
 });
 
+router.get('/searchproject', async(req, res) => {
+    try{
+        console.log(req.query.name)
+        const proj = await Project.find({name: req.query.name})
+        res.status(200).json(proj);
+    }catch(err){
+        res.status(500).json(err);
+    }
+});
 
 module.exports = router;

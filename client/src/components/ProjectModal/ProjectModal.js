@@ -5,7 +5,7 @@ export const ProjectModal = () => {
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("")
-  const [team, setTeam] = useState("")
+  const [team, setTeam] = useState("none")
   const [fullteam, setFullteam] = useState([]);
   const [loaded, setLoaded] = useState(false);
 

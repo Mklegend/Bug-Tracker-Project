@@ -36,7 +36,7 @@ export default function Dashboard() {
                             <ProjectModal />
                         </div>
                     </div>
-                    <DataSection prj={true} title={'Team'} item={'Member'} tableHeadings={['Name', 'Description', 'Lead']} tableEntries={['john@gmail.com', '+9203030300303']} projectName={'Bug Tracker 1.0'} />
+                    <DataSection tableHeadings={['Name', 'Description', 'Lead']} data={allProjects} />
                 </div>
                 <TicketStatsSection />
             </div>

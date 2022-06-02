@@ -1,3 +1,5 @@
+const Ptickets = require("../models/Ptickets");
+
 const router = require("express").Router();
 
 
@@ -14,7 +16,21 @@ router.post("/createpticket", async (req, res) => {
     // } catch (err) {
     //     res.status(500).json(err);
     // }
-    res.send("pticket api hit");
+    // res.send("pticket api hit");
+
+    const temp = new Ptickets({projectId: "2951b05980ffaf08728d03f", ticketTitle: "First"})
+
+
+});
+
+router.get('/searchpticket', async(req, res) => {
+    try{
+        console.log(req.query.id)
+        const proj = await Ptickets.find({projectId: req.query.name})
+        res.status(200).json(proj);
+    }catch(err){
+        res.status(500).json(err);
+    }
 });
 
 module.exports = router;
