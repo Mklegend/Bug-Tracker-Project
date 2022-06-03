@@ -2,6 +2,8 @@ const router = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken');
+const Employee = require('../models/employeeSchema');
+const passport = require("passport");
 
 //REGISTER
 router.post("/register", async (req, res) => {
@@ -13,7 +15,15 @@ router.post("/register", async (req, res) => {
             email: req.body.email,
             password: hashedPass,
         });
+        
 
+        const newEmployee = new Employee({
+            name: req.body.name,
+            designation: 'Employee',
+            assigned: false
+        }); 
+
+        const employee = await newEmployee.save();
         const user = await newUser.save();
         res.status(200).json(user);
     } catch (err) {
@@ -35,5 +45,23 @@ router.post("/login", async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.get('/google/',
+    passport.authenticate('google',{scope:['profile']})
+)
+
+router.get('/google/dashboard',passport.authenticate('google',{failureRedirect:'login'}),(req,res)=>{
+    console.log('But it came here !')
+    res.redirect('http://localhost:5000/auth/dashboard')
+})
+
+router.get('/dashboard',(req,res)=>{
+    if(req.isAuthenticated){
+        console.log('Came here !')
+        res.redirect('http://localhost:3000/dashboard')
+    }else{
+        res.redirect('http://localhost:3000/signup')
+    }
+})
 
 module.exports = router;

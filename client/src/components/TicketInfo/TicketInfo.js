@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { CommentMaker } from '../CommentMaker/CommentMaker'
 import Ticket from '../Ticket/Ticket'
 
-export default class TicketInfo extends Component {
-  render() {
+function TicketInfo(props){
     return (
       <div className='container-fluid px-5 pt-2 pb-5 my-5 rounded-3' style={{boxShadow:'0 3px 10px rgb(0 0 0 / 0.2)'}}>
         <div className='container-fluid px-0 my-5'>
@@ -11,7 +10,9 @@ export default class TicketInfo extends Component {
         </div>
         <div className='row'>
             <div className='col-12 col-md-6'>
-                <Ticket />
+              { props.show === true ?
+                (<Ticket ticketInfo = {props.ticket}/>) : (<h2>Select a ticket to view detailed informaion</h2>)
+              }
             </div>
             <div className='col-12 col-md-6'>
                 <CommentMaker />
@@ -20,4 +21,6 @@ export default class TicketInfo extends Component {
       </div>
     )
   }
-}
+
+  export default TicketInfo;
+  

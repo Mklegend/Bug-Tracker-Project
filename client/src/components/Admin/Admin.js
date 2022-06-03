@@ -46,7 +46,7 @@ export default class Admin extends React.Component {
     };
 
     componentDidMount() {
-        axios.get('http://localhost:8000/organization/getemployee').then((result) => {
+        axios.get('http://localhost:5000/organization/getemployee').then((result) => {
             // console.log(result.data)
             this.setState({
                 data: result.data
@@ -64,7 +64,7 @@ export default class Admin extends React.Component {
                             <Modal.Title>Add user details below</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                            <Form action='http://localhost:8000/organization/createemployee' method='post'>
+                            <Form action='http://localhost:5000/organization/createemployee' method='post'>
                                 <Form.Group className="mb-3" controlId="formBasicUsername">
                                     <Form.Label>Username</Form.Label>
                                     <Form.Control type="text" placeholder="Username" name='name' />
@@ -92,7 +92,7 @@ export default class Admin extends React.Component {
                             <Modal.Title>Add user details below</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                            <Form action='http://localhost:8000/organization/updateemployee' method='post'>
+                            <Form action='http://localhost:5000/organization/updateemployee' method='post'>
                                 <Form.Group className="mb-3" controlId="formBasicUsername">
                                     <Form.Label>Old Username</Form.Label>
                                     <Form.Control type="text" placeholder="Designation" name='oldName'/>
@@ -139,11 +139,11 @@ export default class Admin extends React.Component {
                                                     <li key={item._id}>
                                                         {item.name}
                                                     </li>
-                                                    <form action='http://localhost:8000/organization/deleteemployee' method='post'>
+                                                    <form action='http://localhost:5000/organization/deleteemployee' method='post'>
                                                         <input type="hidden" name='id' value={item._id} />
                                                         <button type='submit'>Delete</button>
                                                     </form>
-                                                    {/* <form action='http://localhost:8000/organization/getemployee' method='get'>
+                                                    {/* <form action='http://localhost:5000/organization/getemployee' method='get'>
                                                         <input type="hidden" name='id' value={item._id} /> */}
                                                         <div className='container'>
                                                             <Button variant="primary" type='submit' onClick={()=>{this.handleShow2(item._id,item.name,item.designation)}}>Edit user</Button>{' '}

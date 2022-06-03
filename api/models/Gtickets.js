@@ -18,9 +18,19 @@ const GticketsSchema = new mongoose.Schema(
             type: Number,
             required: true,
         },
+        type:{
+            type: String,
+        },
+        estimatedTime: {
+          type: Number,
+          required: true,  
+        },
         priority:{
             type: String,
             required: true,
+        },
+        comments: {
+            type: [String]
         }
     },
     { timestamps: true }

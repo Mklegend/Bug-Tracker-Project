@@ -1,11 +1,26 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import {Modal,Button, InputGroup} from 'react-bootstrap'
+import axios from 'axios'
 
 export const TicketModal = () => {
     const [show, setShow] = useState(false);
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("")
+    const [lead, setLead] = useState("none")
+    const [fullteam, setFullteam] = useState([]);
+    const [loaded, setLoaded] = useState(false);
+    const [time, setTime] = useState();
+    const [type, setType] = useState("Issue");
+    const [priority, setPriority] = useState("low");
+    const [status, setStatus] = useState("new");  
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+
+    async function submit() {
+        
+    } 
   
     return (
       <>

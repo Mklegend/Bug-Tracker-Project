@@ -1,12 +1,30 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import {Modal,Button, InputGroup} from 'react-bootstrap'
+import axios from 'axios'
 
 export const TeamModal = () => {
     const [show, setShow] = useState(false);
-
+    const [devs,setDevs] = useState([])
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-  
+    
+    const [selectedDevs,setSelectedDevs] = useState([])
+
+    const addDev = (e)=>{
+      // const value = e.target.value
+      console.log(e)
+    }
+
+    const getData = async (req,res)=>{
+      const result = axios.get('http://localhost:5000/organization/getemployee')
+      setDevs(result.data);
+   }
+
+  useEffect(()=>{
+      getData()
+  },[])
+
+
     return (
       <>
         
@@ -22,12 +40,7 @@ export const TeamModal = () => {
           <Modal.Body>
             <div className='container'>
                 <label className='h3 text-muted'>Available Users</label>
-                <select className="form-select" multiple aria-label="multiple select example">
-                    <option selected>Select Members</option>
-                    <option value="1">Jhon Doe</option>
-                    <option value="2">Marry Herd</option>
-                    <option value="3">Tiara George</option>
-                </select>
+                  {devs?.map((element) => {return <option value={element.name} onClick={() => {setDevs(element.name)}} >{element.name}</option>})}
             </div>
           </Modal.Body>
           <Modal.Footer className='justify-content-start border-0 m-2'>

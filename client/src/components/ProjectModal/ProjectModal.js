@@ -13,7 +13,7 @@ export const ProjectModal = () => {
       loadData();
   }, [])
   async function loadData() {
-    let x = await axios.get('http://localhost:8000/organization/getfreeemployee');
+    let x = await axios.get('http://localhost:5000/organization/getfreeemployee');
     if (x){
       setFullteam(x.data);
       setLoaded(true);
@@ -23,7 +23,7 @@ export const ProjectModal = () => {
   // const addNewProject = () => setShow(false);
   async function addNewProject() {
     if (name && description) {
-      await axios.post("http://localhost:8000/project/newproject", { name: name, description: description, lead: team });
+      await axios.post("http://localhost:5000/project/newproject", { name: name, description: description, lead: team });
       setShow(false);
     }
   }

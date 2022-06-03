@@ -11,7 +11,7 @@ export default function Dashboard() {
     const [allProjects, setProjects] = useState([]);
 
     async function getProjects() {
-        let x = await axios.get("http://localhost:8000/project/getproject")
+        let x = await axios.get("http://localhost:5000/project/getproject")
         setProjects(x.data);
         console.log(x.data);
     }

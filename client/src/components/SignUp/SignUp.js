@@ -81,7 +81,7 @@ export const SignUp = () => {
                                         <a href="/#" className="btn btn-primary facebook text-center"> <span>Sign Up with Facebook</span> <Facebook size={20} className='ms-2' /> </a>
                                     </div>
                                     <div className='align-items-center'>
-                                        <a href="/#" className="btn btn-primary google-plus text-center"> Sign Up with Gmail <Google size={20} className='ms-4' />  </a>
+                                        <a href="http://localhost:5000/auth/google" className="btn btn-primary google-plus text-center"> Sign Up with Gmail <Google size={20} className='ms-4' />  </a>
                                     </div>
                                 </div>
                             </Form.Group>

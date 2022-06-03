@@ -27,7 +27,7 @@ router.post('/createemployee', async (req, res) => {
 
 router.get("/getemployee", async (req,res)=>{
     try{
-        const emp = await employee.find({})
+        const emp = await employee.find({assigned:false})
         // console.log(emp)
         res.status(200).json(emp);
     }catch(err){

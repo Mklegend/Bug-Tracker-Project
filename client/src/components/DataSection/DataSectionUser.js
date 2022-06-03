@@ -1,10 +1,8 @@
 import React from 'react'
 import { Component } from 'react'
 import DataTable from '../DataTable/DataTable'
-import DataTableTicket from '../DataTable/DataTableTicket'
 
-
-function DataSection(props) {
+function DataSectionUser(props) {
   return (
     <div className='container-fluid'>
       <div className='row mt-4'>
@@ -20,24 +18,12 @@ function DataSection(props) {
           </thead>
 
           <tbody>
-            {props.isTicket ? (props.data.map((row) => { return <DataTableTicket projectName={row.ticket} tableEntries={[row.status, row.priority]} callback={props.callback}></DataTableTicket>}))
-
-              :
-              (props.data.map((row) => { return <DataTable projectName={row.name} tableEntries={[row.description, row.lead]}></DataTable> }))
+            {
+            props.data.map((row) => { return <DataTable projectName={row.username} tableEntries={[row.email, row._id]}></DataTable> })
             }
           </tbody>
-
-
-
         </table>
-
-
-
-
-
       </div>
-
-
       {/* <div>
         <nav aria-label="Page navigation example">
           <ul className="pagination">
@@ -59,4 +45,4 @@ function DataSection(props) {
   );
 }
 
-export default DataSection;
+export default DataSectionUser;
